@@ -9,9 +9,9 @@ Prerequisites - APACHE Servers and PHP modules must be pre-enabled for working o
 # Initialisation of MYSQL DATABASE
 
 1. Make sure to have a MYSQL client in your desktop, create a 'root' user (by default) with password 'root' and a Database 'todolist'.
-$ mysql -u root -p
-$ create Database todolist;
-$ use todolist;
+* $ mysql -u root -p
+* $ create Database todolist;
+* $ use todolist;
 
 2. Create a Table 'Users' with three columns 'Name', 'Email' and 'Password'
 $ Create table Users(Name varchar(100), Email varchar(100), Password varchar(100));
