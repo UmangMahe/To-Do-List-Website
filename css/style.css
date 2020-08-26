@@ -1,0 +1,248 @@
+body {
+font-family: "Comic Sans MS", sans-serif;
+background-color: #292826;
+background-image: url("../images/wall.jpg");
+background-size:cover;
+zoom:90%;
+}
+
+h3 {
+margin: 15px;
+padding: 10px 5px;
+font-family: "Comic Sans MS", sans-serif;
+font-size:30px;
+}
+
+hr {
+max-width:90%;
+width:auto;
+}
+
+.sep {
+margin-top:auto;
+opacity:0;
+margin:4%;
+background: #a40000;
+border:1px solid #ef2929;
+animation: ltor 1s;
+animation-delay: 0.3s;
+animation-fill-mode: both;
+}
+
+@keyframes ltor {
+0% {opacity:0;
+    max-width:14%;}
+100% {opacity:1;
+     border:1px solid #a40000;}
+}
+
+
+.body1 {
+position: relative;
+margin:7% auto;
+width: auto;
+max-width:15%;
+overflow:hidden;
+}
+div {
+border-radius: 20px;
+width: auto;
+margin:0 auto;
+background-color: #e6e6e6;
+border: 2px solid #F9D342;
+padding: 15px 40px;
+animation: fadin 1s;
+animation-fill-mode: both;
+}
+@keyframes fadin {
+0% {opacity:0;
+    transform: scale(1.2);
+    border:5px solid #a40000;}
+75% {opacity:1;
+     }
+100% {opacity:1;
+      border: 2px solid #F9D342;
+      transform:scale(1.15);}
+}
+
+a {
+font-size:14px;
+width: auto;
+margin:auto;
+border: none;
+outline: 0;
+text-decoration: none;
+}
+
+.sep1 {
+margin-top:1em;
+margin-left:-40px;
+margin-right:-40px;
+border-radius: 0px 5px;
+border:2px solid #a40000;
+margin-bottom:-2em;
+max-width:0%;
+}
+
+a:hover ~ .sep1 {
+max-width:150%;
+width:auto;
+opacity:0;
+animation: ltor2 1s;
+animation-delay:0.2s;
+animation-fill-mode:both;
+}
+@keyframes ltor2 {
+0% {max-width:0%;
+    opacity:0.8;}
+100% {
+margin-left:150%;}
+}
+
+p {
+font-family:verdana;
+text-align:center;
+opacity:1;
+transition:opacity 500ms;
+border: 1px solid green;
+background-color: green;
+color: white;
+position:relative;
+border-radius:7px;
+width:auto;
+top:-46em;
+margin:0 auto;
+max-width:10%;
+padding: 15px;
+animation: fade 300ms linear;
+}
+@keyframes fade {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+p.logout,p.invalid_email,p.success,p.exist_email,p.details {
+opacity:0;
+}
+
+h2 {
+font-size: 50px;
+text-align:center;
+width:auto;
+color: #F9D342;
+letter-spacing:1px;
+}
+
+@media screen and (max-width:1000px) {
+.body1{
+
+max-width:55vw;
+}
+p{
+top:-32em;
+max-width:45%;
+}
+h2 {
+font-size:6vw;
+margin: -10px 0px 70px auto;
+}
+}
+
+form {
+text-align:center;
+}
+.btn {
+font-weight:bold;
+max-width:auto;
+width: 95%;
+color: white;
+border: none;
+padding: 15px 20px;
+border-radius: 5px;
+margin: 6px;
+cursor: pointer;
+transition: 0.5s;
+
+}
+.lbtn {
+background-color:maroon;
+}
+.lbtn:hover{
+opacity: 0.9;
+}
+input[type=text], input[type=password] {
+position:relative;
+border: 2px solid #cccccc;
+padding: 15px 20px;
+border-radius: 5px;
+margin: 6px;
+outline:none;
+width:95%;
+max-width:auto;
+transition: all 0.5s;
+}
+input[type=text]:focus, input[type=password]:focus {
+border: 2px solid #888a85;
+opacity:0.9;
+border-radius: 6px;
+}
+input[type=text]:hover, input[type=password]:hover {
+border: 2px solid #888a85;
+opacity: 0.8;
+border-radius: 10px;
+}
+label {
+cursor: pointer;
+margin:2px;
+float:left;
+display: inline-block;
+left:11%;
+position: relative;
+font-size:15px;
+font-family: verdana;
+}
+
+label input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top:2px;
+left: -23px;
+height: 15px;
+width: 15px;
+border: 1px solid #babdb6;
+background-color: #eeeeec;
+border-radius: 3px;
+transition: 0.3s;
+}
+.checkmark:hover{
+border-radius: 10px;
+background-color: #ccc;
+}
+label input:checked ~ .checkmark {
+border-radius: 10px;
+background-color: maroon;
+border: 1px solid maroon;
+}
+
+.checkmark:after {
+content: "";
+position: relative;
+display: none;
+top:15%;
+margin:0 auto;
+width: 2px;
+height: 6px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+transition: 0.3s;
+}
+label input:checked ~ .checkmark:after {
+display: block;
+}
