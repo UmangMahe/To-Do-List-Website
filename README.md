@@ -14,8 +14,8 @@ Prerequisites - APACHE Servers and PHP modules must be pre-enabled for working o
 * $ use todolist;
 
 2. Create a Table 'Users' with three columns 'Name', 'Email' and 'Password'
-$ Create table Users(Name varchar(100), Email varchar(100), Password varchar(100));
-$ desc Users;
+* $ Create table Users(Name varchar(100), Email varchar(100), Password varchar(100));
+* $ desc Users;
 
 # Initialisation of Repository 
  
@@ -31,7 +31,7 @@ $ desc Users;
  4. Make sure Apache servers are running, sudo systemctl status apache2.service
  5. Open browser and type 'localhost/todolist' or 'localhost:<your port number>/todolist'
   
-*THIS PROJECT WAS SOLELY MADE AS AN ASSIGNMENT FOR THE COLLEGE AND MAY OR MAY NOT BE WELL DOCUMENTED AND EFFICIENT, ANY SUGGESTIONS AND COMMITS ARE HIGHLY APPRECIATED*
+*THIS PROJECT WAS SOLELY MADE AS AN ASSIGNMENT FOR THE COLLEGE AND MAY OR MAY NOT BE WELL DOCUMENTED AND EFFICIENT, ANY SUGGESTIONS AND COMMITS ARE HIGHLY APPRECIATED ;)*
 
-# Creator and maintainer - Umang Maheshwari
+*Creator and maintainer - Umang Maheshwari
 
