@@ -14,9 +14,9 @@ Prerequisites - APACHE Servers and PHP modules must be pre-enabled for working o
 * $ create Database todolist;
 * $ use todolist;
 
-2. Create a Table 'Users' with three columns 'Name', 'Email' and 'Password'
-* $ Create table Users(Name varchar(100), Email varchar(100), Password varchar(100));
-* $ desc Users;
+2. ~~Create a Table 'Users' with three columns 'Name', 'Email' and 'Password'~~
+* ~~$ Create table Users(Name varchar(100), Email varchar(100), Password varchar(100));~~
+* ~~$ desc Users;~~
 
 # Initialisation of Repository 
  
