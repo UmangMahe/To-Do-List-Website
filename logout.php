@@ -1,8 +1,11 @@
 <?php
 session_start();
 $filename=$_SESSION['file'].".txt";
-$link = $_SERVER['DOCUMENT_ROOT'] . "/todolist/tmp_data/$filename";
-unlink($link);
+$folder_path = $_SERVER['DOCUMENT_ROOT'] . "/todolist/".$_SESSION['tname']."_data";
+$file_path = $folder_path."/".$filename;
+unlink($file_path);
+echo $folder_path;
+rmdir($folder_path);
 unset($_SESSION['password']);
 setcookie('name',$name,time()-1,"/todolist");
 unset($_SESSION['file']);

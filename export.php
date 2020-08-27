@@ -15,7 +15,8 @@ else {
 $name=substr($_COOKIE['name'],0,strpos($_COOKIE['name'],' '));
 $filename = "ToDoList@".$name;
 $_SESSION['file']=$filename;
-$filepath = $_SERVER['DOCUMENT_ROOT'] . "/todolist/tmp_data/";
+$filepath = $_SERVER['DOCUMENT_ROOT'] . "/todolist/".$tname."_data/";
+mkdir($_SERVER['DOCUMENT_ROOT'] . "/todolist/".$tname."_data/");
 $fp = fopen($filepath.$filename.".txt","w");
 chmod($fp, 0777);
 $create = mysqli_query($db,"SELECT id,task FROM $tname");

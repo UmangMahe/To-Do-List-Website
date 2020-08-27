@@ -26,7 +26,7 @@ unset($_SESSION['welcome']);
 }
 $name = str_replace( array( '\'', '"', ',' , ';', '<', '>',' ','.','/'), '', $_COOKIE['name']);
 $email = str_replace( array( '\'', '"', ',' , ';', '<', '>',' ','.','/',"@"), '', $_COOKIE['email']);
-$tname = substr($name,0,4).substr($email,4,7);
+$tname = md5(substr($name,0,4).substr($email,4,12).md5($_COOKIE['password']));
 $_SESSION['tname'] = $tname;
 $sql = "DESC $tname";
 if(!mysqli_query($db,$sql)) {
@@ -76,7 +76,7 @@ mysqli_close($db);
 <h2 align=center><font size=6px>Welcome</font> <div class="name"><?php echo $_COOKIE['name'] ?></div> </h2><br>
 <a class="btn1" href=logout.php>Logout</a>
 <a class="btn2" href=export.php><b>Export</b</a>
-<a id="btn3" href=./tmp_data/<?php echo $_GET['download'] ?> download><span><i class="fa fa-download"></i></span></a>
+<a id="btn3" href=./<?php echo $_SESSION['tname']?>_data/<?php echo $_GET['download'] ?> download><span><i class="fa fa-download"></i></span></a>
 <div class="heading">
 <h2 style="font-style:'Hervetica';">ToDo List</h2>
 </div>

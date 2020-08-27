@@ -21,6 +21,20 @@ exit();
 
 $pass=$_POST['pass'];
 
+$verify_table = "DESC Users";
+if(!mysqli_query($connect, $verify_table)) {
+$table_query = "CREATE TABLE Users(Name varchar(100), Email varchar(100), Password varchar(100))";
+if(mysqli_query($connect, $table_query)) {
+insertinVal();
+}
+else {
+echo "Error ".mysqli_error($connect);
+}
+}
+else {insertinVal();}
+
+function insertinVal() {
+global $name, $pass, $email, $connect;
 $insert = "INSERT INTO Users(Name, Password, Email) VALUES ('$name','$pass','$email')";
 if(mysqli_query($connect,$insert)) {
 $_SESSION['success']=1;
@@ -31,6 +45,10 @@ header("location:index.php");
 else {
 echo "Error ".mysqli_error($connect);
 }
+}
+
+
+
 mysqli_close();
 
 ?>
